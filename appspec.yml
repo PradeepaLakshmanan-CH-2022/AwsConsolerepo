@@ -21,5 +21,5 @@ files:
     destination: C:\inetpub\wwwroot
 hooks:
   BeforeInstall:
-    - location: scripts/before-install.bat
+    - location: scripts/before-install.ps1
       timeout: 900
