@@ -19,11 +19,7 @@ os: windows
 files:
   - source: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\
     destination: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\
-    permissions:
-  - object: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\
-    pattern: "**"
-    owner: Administrators
-    group: Administrators
+    
 hooks:
   BeforeInstall:
     - location: scripts/before-install.ps1
