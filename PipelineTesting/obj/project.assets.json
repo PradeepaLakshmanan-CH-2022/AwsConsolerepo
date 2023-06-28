@@ -229,11 +229,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyCode\\DockerCode\\PipelineTesting\\PipelineTesting.csproj",
+      "projectUniqueName": "C:\\MyCicdApplication\\AwsConsolerepo\\PipelineTesting\\PipelineTesting.csproj",
       "projectName": "PipelineTesting",
-      "projectPath": "C:\\MyCode\\DockerCode\\PipelineTesting\\PipelineTesting.csproj",
+      "projectPath": "C:\\MyCicdApplication\\AwsConsolerepo\\PipelineTesting\\PipelineTesting.csproj",
       "packagesPath": "C:\\Users\\Pradeepa.lakshmanan\\.nuget\\packages\\",
-      "outputPath": "C:\\MyCode\\DockerCode\\PipelineTesting\\obj\\",
+      "outputPath": "C:\\MyCicdApplication\\AwsConsolerepo\\PipelineTesting\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Pradeepa.lakshmanan\\AppData\\Roaming\\NuGet\\NuGet.Config",

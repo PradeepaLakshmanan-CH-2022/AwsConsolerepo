@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tnr8D/McbruBKvT2x2gheQAd/qRhps0zdXW0MAXwta82NEOYupYUOOQH+DuiJxUoX7Eufs1JcdYo1m0x5nt+Pw==",
+  "dgSpecHash": "hMP2FMVs9Gg5Vm4GZd4Qs9lVATm/N7bpXkFXW3bkX5F7cFN+96nFEab0vrcHLI17ZlAflZb7agNeO08+9w7ZuA==",
   "success": true,
-  "projectFilePath": "C:\\MyCode\\DockerCode\\PipelineTesting\\PipelineTesting.csproj",
+  "projectFilePath": "C:\\MyCicdApplication\\AwsConsolerepo\\PipelineTesting\\PipelineTesting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pradeepa.lakshmanan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Pradeepa.lakshmanan\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
