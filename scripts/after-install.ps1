@@ -8,7 +8,13 @@
 #     Start-Service -Name "W3SVC"
 # }
 # Change to the directory where your .NET API application is located
-Set-Location -Path "C:\MyCicdApplication\AwsConsolerepo\PipelineTesting"
+# Set-Location -Path "C:\MyCicdApplication\AwsConsolerepo\PipelineTesting"
 
-# Start the .NET API application
-Start-Process -FilePath "dotnet" -ArgumentList "run" -NoNewWindow
+# # Start the .NET API application
+# Start-Process -FilePath "dotnet" -ArgumentList "run" -NoNewWindow
+
+# Example script for after-install hook
+
+# Start the default IIS application pool
+Start-WebAppPool -Name "DefaultAppPool"
+

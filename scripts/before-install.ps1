@@ -10,4 +10,9 @@
 # # # Run the .NET API application
 # # Start-Process -FilePath "dotnet" -ArgumentList "PipelineTesting.dll" -NoNewWindow
 # Stop the .NET API application
-Stop-Process -Name "dotnet" -Force
+# Stop-Process -Name "dotnet" -Force
+# Example script for before-install hook
+
+# Stop the default IIS application pool
+Stop-WebAppPool -Name "DefaultAppPool"
+

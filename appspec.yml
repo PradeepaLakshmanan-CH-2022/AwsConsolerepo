@@ -1,44 +1,59 @@
+# # # version: 0.0
+# # # os: windows
+
+# # # files:
+# # #   - source: .
+# # #     destination: C:\inetpub\wwwroot\myapi
+
+# # # hooks:
+# # #   BeforeInstall:
+# # #     - location: scripts\before-install.ps1
+
+# # #   AfterInstall:
+# # #     - location: scripts\after-install.ps1
+
+# # #   ApplicationStart:
+# # #     - location: scripts\application-start.ps1
 # # version: 0.0
 # # os: windows
-
 # # files:
-# #   - source: .
-# #     destination: C:\inetpub\wwwroot\myapi
-
+# #   - source: \index.html
+# #     destination: C:\inetpub\wwwroot
 # # hooks:
 # #   BeforeInstall:
-# #     - location: scripts\before-install.ps1
+# #     - location: scripts/before-install.ps1
+# #       timeout: 900
 
-# #   AfterInstall:
-# #     - location: scripts\after-install.ps1
 
-# #   ApplicationStart:
-# #     - location: scripts\application-start.ps1
 # version: 0.0
 # os: windows
 # files:
-#   - source: \index.html
-#     destination: C:\inetpub\wwwroot
+#   - source: .
+#     destination: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting
+#     overwrite: true
+#     permissions:
+#       - object: "*"
+#         pattern: "**/*"
+
 # hooks:
 #   BeforeInstall:
 #     - location: scripts/before-install.ps1
 #       timeout: 900
-
-
+#   AfterInstall:
+#     - location: scripts/after-install.ps1
+#       timeout: 900
 version: 0.0
 os: windows
 files:
   - source: .
-    destination: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting
-    overwrite: true
-    permissions:
-      - object: "*"
-        pattern: "**/*"
-
+    destination: C:\MyCode\MyApiApplication
 hooks:
   BeforeInstall:
     - location: scripts/before-install.ps1
       timeout: 900
   AfterInstall:
     - location: scripts/after-install.ps1
+      timeout: 900
+  ApplicationStart:
+    - location: scripts/application-start.ps1
       timeout: 900
