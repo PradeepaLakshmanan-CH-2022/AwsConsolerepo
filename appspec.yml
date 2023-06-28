@@ -17,7 +17,7 @@
 version: 0.0
 os: windows
 files:
-  - source: PipelineTesting.dll
+  - source:  C:\MyCicdApplication\AwsConsolerepo\PipelineTesting
     destination: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting
 hooks:
   BeforeInstall:
