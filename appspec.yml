@@ -17,9 +17,8 @@
 version: 0.0
 os: windows
 files:
-  - source: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\
-    destination: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\
-    
+  - source: \index.html
+    destination: C:\inetpub\wwwroot
 hooks:
   BeforeInstall:
     - location: scripts/before-install.ps1
