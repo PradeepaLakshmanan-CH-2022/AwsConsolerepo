@@ -6,18 +6,21 @@ phases:
       dotnet: 6.0
   pre_build:
     commands:
-      - echo Restore started on `date`
+      # Restore dependencies
+      - cd C:\MyCicdApplication\AwsConsolerepo\PipelineTesting
       - dotnet restore
+      
   build:
     commands:
-      - echo Build started on `date`
+      # Build the project
       - dotnet build --configuration Release
+      
   post_build:
     commands:
-      - echo Publish started on `date`
-      - dotnet publish --configuration Release --output ./publish_output
-
+      # Publish the project
+      - dotnet publish --configuration Release --output C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\publish
+      
 artifacts:
   files:
-    - './publish_output/**/*'
+    - 'C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\publish/**/*'
   discard-paths: yes
