@@ -1,3 +1,3 @@
  
- Import-Module -Name ServerManager
- Install-WindowsFeature Web-Server
+Import-Module -Name ServerManager
+Install-WindowsFeature Web-Server
