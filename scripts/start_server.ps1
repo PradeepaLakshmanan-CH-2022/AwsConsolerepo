@@ -4,4 +4,4 @@
 Set-Location -Path "C:\inetpub\wwwroot\myapi"
 
 # Start the API server process
-Start-Process -FilePath "dotnet" -ArgumentList "run" -NoNewWindow
+Start-Process -FilePath "dotnet" -ArgumentList "MyApi.dll" -NoNewWindow

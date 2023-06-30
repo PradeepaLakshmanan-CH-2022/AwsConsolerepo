@@ -1,12 +1,7 @@
 # Stop the API server
 
-# Check if the API server process is running
-$apiProcess = Get-Process -Name "MyApi" -ErrorAction SilentlyContinue
+# Change to the application directory
+Set-Location -Path "C:\inetpub\wwwroot\myapi"
 
-if ($apiProcess) {
-    # If the API server process is running, stop it gracefully
-    $apiProcess | Stop-Process -Force
-    Write-Host "API server stopped successfully."
-} else {
-    Write-Host "API server is not running."
-}
+# Stop the API server process
+Stop-Process -Name "MyApi" -Force

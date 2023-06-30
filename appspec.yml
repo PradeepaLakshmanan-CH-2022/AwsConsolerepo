@@ -1,9 +1,8 @@
 version: 0.0
 os: windows
 files:
-  - source: /
+  - source: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting
     destination: C:\inetpub\wwwroot\myapi
-
 hooks:
   BeforeInstall:
     - location: scripts/stop_server.ps1
