@@ -5,8 +5,5 @@ files:
     destination: C:\inetpub\wwwroot\YourAppFolder
 hooks:
   ApplicationStart:
-    - location: scripts/start_api.ps1
-      timeout: 300
-  ValidateService:
-    - location: scripts/validate_service.ps1
-      timeout: 300
+    - location: scripts/application-start.ps1
+      timeout: 900
