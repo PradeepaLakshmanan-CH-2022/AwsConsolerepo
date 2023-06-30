@@ -22,5 +22,5 @@ phases:
       
 artifacts:
   files:
-    - 'C:\MyCicdApplication\AwsConsolerepo\PipelineTesting\publish/**/*'
+    - 'PipelineTesting/publish/**/*'
   discard-paths: yes
