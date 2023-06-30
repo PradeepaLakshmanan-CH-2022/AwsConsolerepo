@@ -2,8 +2,20 @@ version: 0.0
 os: windows
 files:
   - source: /
-    destination: C:\inetpub\wwwroot\YourAppFolder
+    destination: C:\inetpub\wwwroot\myapi
+
 hooks:
+  BeforeInstall:
+    - location: scripts/stop_server.ps1
+      timeout: 300
+      runas: Administrator
+
+  AfterInstall:
+    - location: scripts/install_dependencies.ps1
+      timeout: 300
+      runas: Administrator
+
   ApplicationStart:
-    - location: scripts/application-start.ps1
-      timeout: 900
+    - location: scripts/start_server.ps1
+      timeout: 300
+      runas: Administrator
