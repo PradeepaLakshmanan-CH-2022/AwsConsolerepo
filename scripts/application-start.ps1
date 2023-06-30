@@ -1,7 +1,17 @@
-# Example script for application-start hook
+# Set the application path
+$applicationPath = "C:\PipelineDeployment\ApiPipelineDeploy\PipelineTesting"
 
-# Change to the directory where your .NET API application is located
-Set-Location -Path "C:\MyCicdApplication"
+# Clean the application directory
+Remove-Item -Path $applicationPath\* -Recurse -Force
 
-# Run the .NET API application
-Start-Process -FilePath "dotnet" -ArgumentList "run" -NoNewWindow
+# Build and publish the application
+dotnet publish -c Release -o $applicationPath
+
+# Create a new IIS application pool
+New-WebAppPool -Name MyApiAppPool
+
+# Create a new IIS website
+New-Website -Name MyApiWebsite -PhysicalPath $applicationPath -ApplicationPool MyApiAppPool -Port 80
+
+# Start the IIS website
+Start-Website -Name MyApiWebsite
