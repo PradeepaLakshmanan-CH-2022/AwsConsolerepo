@@ -46,7 +46,7 @@ version: 0.0
 os: windows
 files:
  - source: /index.html
-   destination: C:\MyCicdApplication
+  destination: /var/www/html/
 hooks:
   BeforeInstall:
     - location: scripts/before-install.ps1
