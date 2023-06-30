@@ -1,7 +1,8 @@
-# Start the API server
+# Specify the path to your .NET API application folder
+$applicationPath = "C:\MyCicdApplication\AwsConsolerepo\PipelineTesting"
 
-# Change to the application directory
-Set-Location -Path "C:\inetpub\wwwroot\myapi"
+# Change the working directory to the application directory
+Set-Location $applicationPath
 
-# Start the API server process
-Start-Process -FilePath "dotnet" -ArgumentList "MyApi.dll" -NoNewWindow
+# Run the .NET API application
+dotnet run
