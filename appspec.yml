@@ -1,54 +1,12 @@
-# # # version: 0.0
-# # # os: windows
-
-# # # files:
-# # #   - source: .
-# # #     destination: C:\inetpub\wwwroot\myapi
-
-# # # hooks:
-# # #   BeforeInstall:
-# # #     - location: scripts\before-install.ps1
-
-# # #   AfterInstall:
-# # #     - location: scripts\after-install.ps1
-
-# # #   ApplicationStart:
-# # #     - location: scripts\application-start.ps1
-# # version: 0.0
-# # os: windows
-# # files:
-# #   - source: \index.html
-# #     destination: C:\inetpub\wwwroot
-# # hooks:
-# #   BeforeInstall:
-# #     - location: scripts/before-install.ps1
-# #       timeout: 900
-
-
-# version: 0.0
-# os: windows
-# files:
-#   - source: .
-#     destination: C:\MyCicdApplication\AwsConsolerepo\PipelineTesting
-#     overwrite: true
-#     permissions:
-#       - object: "*"
-#         pattern: "**/*"
-
-# hooks:
-#   BeforeInstall:
-#     - location: scripts/before-install.ps1
-#       timeout: 900
-#   AfterInstall:
-#     - location: scripts/after-install.ps1
-#       timeout: 900
 version: 0.0
 os: windows
 files:
- - source: /index.html
-  destination: /var/www/html/
+  - source: /
+    destination: C:\inetpub\wwwroot\YourAppFolder
 hooks:
-  BeforeInstall:
-    - location: scripts/before-install.ps1
-      timeout: 900
-  
+  ApplicationStart:
+    - location: scripts/start_api.ps1
+      timeout: 300
+  ValidateService:
+    - location: scripts/validate_service.ps1
+      timeout: 300
